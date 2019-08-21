@@ -1,5 +1,8 @@
 <resources>
 
     <string name="app_name">Flying Bird</string>
+    <string name="highest_score">Highest Score :</string>
+    <string name="start">Start</string>
+    <string name="score">Score :</string>
 
 </resources>
