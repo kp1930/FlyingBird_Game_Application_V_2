@@ -1,8 +1,10 @@
-package com.theblackdiamonds.flyingbird;
+package com.theblackdiamonds.flyingbird.activities;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.theblackdiamonds.flyingbird.R;
 
 public class MainActivity extends AppCompatActivity {
 
