@@ -10,12 +10,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.theblackdiamonds.flyingbird.R;
-import com.theblackdiamonds.flyingbird.views.GameView;
 
 public class StartActivity extends AppCompatActivity {
 
     TextView tvHighScore;
     Button btnStart;
+    int hScore;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -24,7 +24,10 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         tvHighScore = findViewById(R.id.textViewScore);
-        tvHighScore.setText("Highest Score : " + GameView.score);
+
+        Intent intent = getIntent();
+        hScore = intent.getIntExtra("highScore", 0);
+        tvHighScore.setText("Highest Score : " + hScore);
 
         btnStart = findViewById(R.id.buttonStart);
         btnStart.setOnClickListener(new View.OnClickListener() {

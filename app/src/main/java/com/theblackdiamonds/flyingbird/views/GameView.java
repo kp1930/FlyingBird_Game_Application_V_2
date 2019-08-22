@@ -20,8 +20,7 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class GameView extends View {
 
-    public static int score;
-    private int birdX = 10, birdY, birdSpeed, life_count = 3, level_count = 1;
+    private int birdX = 10, birdY, birdSpeed, life_count = 3, level_count = 1, score;
     private Bitmap bgImage;
     private Bitmap[] life = new Bitmap[2];
     private Bitmap[] bird = new Bitmap[2];
@@ -113,7 +112,7 @@ public class GameView extends View {
             if (life_count == 0) {
                 @SuppressLint("DrawAllocation")
                 Intent endIntent = new Intent(getContext(), EndActivity.class);
-                endIntent.putExtra("Score", score);
+                endIntent.putExtra("score", score);
                 endIntent.addFlags(FLAG_ACTIVITY_CLEAR_TASK | FLAG_ACTIVITY_NEW_TASK);
                 getContext().startActivity(endIntent);
             }
