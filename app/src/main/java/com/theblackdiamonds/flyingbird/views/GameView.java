@@ -124,12 +124,11 @@ public class GameView extends View {
             blackY = (int) Math.floor(Math.random() * (maxBirdY - minBirdY)) + minBirdY;
         }
         canvas.drawCircle(blackX, blackY, 20, blackPaint);
-
         canvas.drawText("Score : " + score, 20, 60, scorePaint);
 
-//        if (score % 50 == 0) {
-//            level_count++;
-//        }
+        while (score == (50 * level_count)) {
+            level_count++;
+        }
         canvas.drawText("Level : " + level_count, canvasWidth / 2, 60, levelPaint);
 
         for (int i = 0; i < 3; i++) {
